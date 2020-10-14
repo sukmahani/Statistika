@@ -1,0 +1,129 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+ 
+
+```{r}
+dataCredit <- Credit
+head(dataCredit)
+```
+#Mean of rating
+```{r}
+mean(dataCredit$Rating)
+
+```
+#Mean of Cards
+```{r}
+mean(dataCredit$Cards)
+```
+#Mean of Age
+```{r}
+mean(dataCredit$Age)
+```
+#Median of Rating
+```{r}
+median(dataCredit$Rating)
+```
+#Median of Cards
+```{r}
+median(dataCredit$Cards)
+```
+#Median of Age
+```{r}
+median(dataCredit$Age)
+```
+```{r}
+library(lsr)
+
+```
+
+```{r}
+install.packages("lsr")
+```
+```{r}
+library(lsr)
+```
+#Mode of gender
+```{r}
+modeOf(dataCredit$Gender)
+```
+#Mode Of Student
+```{r}
+modeOf(dataCredit$Student)
+```
+
+#Mode of Married
+```{r}
+modeOf(dataCredit$Education)
+```
+#Sample 10 Percentiles of Educate
+```{r}
+quantile(x = dataCredit$Education, probs=0.1 )
+```
+#Sample 37 Percentiles of Educate
+```{r}
+quantile(x = dataCredit$Education, probs=0.37 )
+```
+#Sample 91 Percentiles of Educate
+```{r}
+quantile(x = dataCredit$Education, probs=0.91 )
+```
+#quartile
+```{r}
+quantile(x = dataCredit$Balance, probs= c(0.25, 0.50, 0.75))
+```
+```{r}
+boxplot(dataCredit$Balance)
+```
+
+```{r}
+boxplot(dataCredit$Balance, horizontal= TRUE)
+```
+#Correlation Limit & Rating
+```{r}
+newData <- data.frame(limit = dataCredit$Limit, rating= dataCredit$Rating)
+newData
+```
+#Correlation Age & Cards
+```{r}
+newData <- data.frame(age = dataCredit$Age, cards= dataCredit$Cards)
+newData
+```
+
+#Correlation Income & Education
+```{r}
+newData <- data.frame(income = dataCredit$Income, Education= dataCredit$Education)
+newData
+```
+
+#Plot limit & rating
+```{r}
+newData <- data.frame(limit = dataCredit$Limit, rating= dataCredit$Rating)
+newData
+```
+```{r}
+plot(newData$limit, newData$rating)
+```
+
+#Plot Age & cards
+```{r}
+newData <- data.frame(age = dataCredit$Age, cards= dataCredit$Cards)
+newData
+```
+```{r}
+plot(newData$age, newData$cards)
+```
+#Plot Income & Educate
+```{r}
+newData <- data.frame(income = dataCredit$Income, Education= dataCredit$Education)
+newData
+```
+```{r}
+plot(newData$income, newData$Education)
+```
+
+
+
+
