@@ -1,0 +1,10 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+#Dalam suatu pertandingan, peluang Ronaldo dapat mencetak gol adalah 5/6, jika ronaldo diberi kesempatan menendang sebanyak 5 kali. Tentukan besar peluang Ronaldo mencetak 4 kali gol!
+
+
+```{r}
+dbinom ( x= 4, size = 5,prob=5/6)
+```
